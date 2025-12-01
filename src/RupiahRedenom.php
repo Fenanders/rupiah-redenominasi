@@ -13,6 +13,10 @@ class RupiahRedenom
      */
     public function simplifyRupiah($value, $divisor = 1000)
     {
+        if ($divisor == 0) {
+            throw new \InvalidArgumentException("Divisor cannot be zero.");
+        }
+
         return $value / $divisor;
     }
 

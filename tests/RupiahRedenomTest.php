@@ -25,6 +25,7 @@ class RupiahRedenomTest extends TestCase
         $this->assertEquals(1, $redenom->simplifyRupiah(1000));
         $this->assertEquals(1.5, $redenom->simplifyRupiah(1500));
         $this->assertEquals(0.5, $redenom->simplifyRupiah(500));
+        $this->assertEquals(2000, $redenom->simplifyRupiah(2000000, 1000));
     }
 
     public function testFormatRupiah()
