@@ -1,0 +1,44 @@
+{
+    "name": "yadders/rupiah-redenom",
+    "description": "A Laravel package to handle Rupiah redenomination.",
+    "type": "library",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "Fenanders",
+            "email": "yandi.fenanda247@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yadders\\RupiahRedenom\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yadders\\RupiahRedenom\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yadders\\RupiahRedenom\\RupiahRedenomServiceProvider"
+            ],
+            "aliases": {
+                "Rupiah": "Yadders\\RupiahRedenom\\Facades\\Rupiah"
+            }
+        }
+    }
+}
